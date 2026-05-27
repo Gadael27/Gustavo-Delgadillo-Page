@@ -1,24 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import SmokeSparksCanvas from './components/SmokeSparksCanvas';
 import Home from './pages/Home';
-import Servicios from './pages/Servicios';
-import Catalogo from './pages/Catalogo';
+import Cotizacion from './pages/Cotizacion';
 import Admin from './pages/Admin';
+import CompraCabina from './pages/CompraCabina';
+import Blog from './pages/Blog'; // ✅ NUEVA IMPORTACIÓN DEL MÓDULO DE CONTENIDOS
 
 export default function App() {
   return (
-    <Router>
-      <div className="neon-tube"></div>
-      <SmokeSparksCanvas />
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/cotizacion" element={<Cotizacion />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/compra-tu-cabina" element={<CompraCabina />} />
+        <Route path="/blog" element={<Blog />} /> {/* ✅ RUTA PÚBLICA TOTALMENTE ACTIVADA */}
       </Routes>
-    </Router>
+    </>
   );
 }
