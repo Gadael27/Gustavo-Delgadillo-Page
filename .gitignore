@@ -1,9 +1,6 @@
-# Dependencias
-node_modules/
-
-# Variables de entorno y llaves secretas
 .env
-firebase-key.json
+backend/firebase-key.json
+node_modules/
 
 # Build files
 dist/
